@@ -7,22 +7,22 @@ const botoes = document.querySelectorAll(".opcoes button");
 const nome = document.querySelector("h2 strong");
 
 temaButton.addEventListener("click", () => {
-  document.body.classList.toggle("light");
-  calculadora.classList.toggle("light");
-  nome.classList.toggle("light");
-  display.classList.toggle("light");
-  opcoes.classList.toggle("light");
-  temaButton.classList.toggle("light");
+  document.body.classList.toggle("dark");
+  calculadora.classList.toggle("dark");
+  nome.classList.toggle("dark");
+  display.classList.toggle("dark");
+  opcoes.classList.toggle("dark");
+  temaButton.classList.toggle("dark");
 
   botoes.forEach((botao) => {
-    botao.classList.toggle("light");
+    botao.classList.toggle("dark");
   });
 
-  if (document.body.classList.contains("light")) {
-    temaIcon.src = "./assets/imgs/lua.png";
+  if (document.body.classList.contains("dark")) {
+    temaIcon.src = "./assets/imgs/sol.png";
     temaIcon.alt = "Modo Noturno";
   } else {
-    temaIcon.src = "./assets/imgs/sol.png";
+    temaIcon.src = "./assets/imgs/lua.png";
     temaIcon.alt = "Modo Claro";
   }
 });

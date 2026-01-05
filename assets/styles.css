@@ -28,18 +28,13 @@ header {
 }
 
 #tema img {
-  width: 100%;
-  height: 100%;
-}
-
-#tema:hover {
-  scale: 1.1;
-  transition: all 0.3s ease;
-}
-
-#tema.light {
-  width: 50px;
+  width: 30px;
   height: auto;
+}
+
+#tema img:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
 }
 
 body {
@@ -48,15 +43,15 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: var(--color-dark);
-  color: var(--color-white);
+  background-color: var(--color-light);
+  color: var(--color-dark);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   transition: 0.5s;
 }
 
-body.light {
-  background-color: var(--color-white);
-  color: var(--color-dark);
+body.dark {
+  background-color: var(--color-blue);
+  color: var(--color-white);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
 }
 
@@ -71,7 +66,7 @@ body.light {
   border-radius: 10%;
 }
 
-.opcoes.light {
+.opcoes.dark {
   background-color: var(--color-blue);
 }
 
@@ -88,7 +83,12 @@ body.light {
   border-radius: 50%;
 }
 
-.opcoes button.light {
+.opcoes button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.opcoes button.dark {
   background-color: var(--color-blue);
   color: var(--color-light);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -107,7 +107,7 @@ body.light {
   transition: all 0.3s ease;
 }
 
-.opcoes button:hover.light {
+.opcoes button:hover.dark {
   color: var(--color-blue);
   background-color: var(--color-light);
 }
@@ -121,7 +121,7 @@ body.light {
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
-.calculadora.light {
+.calculadora.dark {
   background-color: var(--color-blue);
 }
 
@@ -139,7 +139,7 @@ body.light {
   font-size: 3rem;
 }
 
-.display.light {
+.display.dark {
   background-color: var(--color-blue);
   color: var(--color-light);
 }
@@ -156,10 +156,10 @@ h2 {
   opacity: 0.7;
 }
 h2 strong {
-  color: var(--color-light);
+  color: var(--color-blue);
   font-weight: 600;
 }
 
-h2 strong.light {
-  color: var(--color-blue);
+h2 strong.dark {
+  color: var(--color-light);
 }
