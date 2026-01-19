@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -7,40 +7,40 @@
     <title>CalculadoraJS | Maria Luisa Sanches</title>
   </head>
 
-  <header>
-    <button id="tema">
-      <img src="./assets/imgs/lua.png" alt="" />
-    </button>
-  </header>
-
   <body>
+    <header>
+      <button id="tema">
+        <img src="./assets/imgs/lua.png" alt="" />
+      </button>
+    </header>
+
     <section class="calculadora">
       <input type="text" class="display" disabled placeholder="0" />
 
       <section class="opcoes">
-        <button>CLR</button>
-        <button>DEL</button>
-        <button>%</button>
-        <button>/</button>
+        <button onclick="clr()">CLR</button>
+        <button onclick="del()">DEL</button>
+        <button onclick="mostrarHistorico()"">HIS</button>
+        <button onclick="escolherOperador('/')" id="operacao">÷</button>
 
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>*</button>
+        <button onclick="escolherNumeros('7')" id="numero">7</button>
+        <button onclick="escolherNumeros('8')" id="numero">8</button>
+        <button onclick="escolherNumeros('9')" id="numero">9</button>
+        <button onclick="escolherOperador('*')" id="operacao">x</button>
 
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
+        <button onclick="escolherNumeros('4')" id="numero">4</button>
+        <button onclick="escolherNumeros('5')" id="numero">5</button>
+        <button onclick="escolherNumeros('6')" id="numero">6</button>
+        <button onclick="escolherOperador('-')" id="operacao">-</button>
 
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>+</button>
+        <button onclick="escolherNumeros('1')" id="numero">1</button>
+        <button onclick="escolherNumeros('2')" id="numero">2</button>
+        <button onclick="escolherNumeros('3')" id="numero">3</button>
+        <button onclick="escolherOperador('+')" id="operacao">+</button>
 
-        <button>,</button>
-        <button>0</button>
-        <button class="igual">=</button>
+        <button onclick="ponto()">.</button>
+        <button onclick="escolherNumeros('0')" id="numero">0</button>
+        <button class="igual" onclick="calcular()">=</button>
       </section>
     </section>
 
